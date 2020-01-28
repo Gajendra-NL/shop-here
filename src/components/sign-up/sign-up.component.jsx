@@ -21,11 +21,14 @@ class SignUp extends React.Component {
 
   handleSubmit = async event => {
     event.preventDefault();
+
     const { displayName, email, password, confirmPassword } = this.state;
+
     if (password !== confirmPassword) {
       alert("passwords don't match");
       return;
     }
+
     try {
       const { user } = await auth.createUserWithEmailAndPassword(
         email,
@@ -41,7 +44,7 @@ class SignUp extends React.Component {
         confirmPassword: ''
       });
     } catch (error) {
-      console.error(error, JSON.stringify(error), error.message);
+      console.error(error);
     }
   };
 
@@ -87,7 +90,7 @@ class SignUp extends React.Component {
             name='confirmPassword'
             value={confirmPassword}
             onChange={this.handleChange}
-            label='Confirm Password 2'
+            label='Confirm Password'
             required
           />
           <CustomButton type='submit'>SIGN UP</CustomButton>
