@@ -27,7 +27,7 @@
       opacity: 0.8;
     }
 
-    .custom-button {
+    .button {
       opacity: 0.85;
       display: flex;
     }
@@ -48,5 +48,27 @@
     .price {
       width: 10%;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .collection-item {
+    width: 44vw;
+
+    &:hover {
+      .image {
+        opacity: unset;
+      }
+  
+      .button {
+        opacity: unset;
+      }
+    }    
+  }
+  .custom-button {
+    min-width: unset;
+    opacity: 0.9;
+    display: block;
+    padding: 0 10px;
   }
 }

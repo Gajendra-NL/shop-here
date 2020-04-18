@@ -66,3 +66,22 @@
     }
   }
 }
+
+@media (max-width: 780px) {
+  .menu-item {
+    max-height: 200px;
+    .content {
+      padding: 0 15px;
+      display: flex;  
+
+      .title {
+        margin: 0 3px 0;
+        font-size: 16px;
+      }
+  
+      .subtitle {
+        font-size: 12px;
+      }
+    }
+  }
+}
